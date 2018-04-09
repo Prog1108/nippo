@@ -1,0 +1,30 @@
+
+
+{% extends "layout.html" %}
+{% block content %}
+
+  <div class="jumbotron">
+    <h1 class="text-center">日報</h1>
+  </div>
+
+  <div class="container">
+    <form action="/post" method="post">
+      <p class="text-info">【作業予定】</p>
+      <textarea name="kyoyotei" cols="100" rows="3" id="text-area"></textarea>
+      <p class="text-info">【作業実績】</p>
+      <textarea name="jiseki" cols="100" rows="3"></textarea>
+      <p class="text-info">【問題】</p>
+      <textarea name="mondai" cols="100" rows="3"></textarea>
+      <p class="text-info">【対応策】</p>
+      <textarea name="taio" cols="100" rows="3"></textarea>
+      <p class="text-info">【所感】</p>
+      <textarea name="shokan" cols="100" rows="3"></textarea>
+      <p class="text-info">【連絡事項】</p>
+      <textarea name="renraku" cols="100" rows="3"></textarea>
+      <p class="text-info">【翌日の作業予定】</p>
+      <textarea name="asitayotei" cols="100" rows="3"></textarea>
+      <button type="submit" class="btn btn-default">保存する</button>
+    </form>
+  </div>
+  
+{% endblock %}
